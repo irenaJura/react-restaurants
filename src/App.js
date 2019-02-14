@@ -66,7 +66,8 @@ class App extends React.Component {
 
                   <div className='results-content'>
                     {this.state.restaurants.map(restaurant => (
-                      <div key={restaurant.id}>
+                      <div key={restaurant.id} className="card-content">
+                        <div className="margin-img"><img src={restaurant.image_url} alt={restaurant.name}/></div>
                         <div>Name: <span className="accent">{restaurant.name}</span></div>
                         <div>Address: <span className="accent">{restaurant.address}, {restaurant.city}</span></div>
                         <div>Price: <span className="accent">{restaurant.price}</span></div>

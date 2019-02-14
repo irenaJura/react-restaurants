@@ -25,3 +25,25 @@
   color: darkred;
   font-weight: 500;
 }
+
+.results-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-content {
+  padding: 0 3%;
+  min-width: 20%;
+  border: 1px solid gray;
+  border-radius: 2%;
+  margin: 2%;
+}
+
+.card-content:hover {
+  box-shadow: 10px 10px 6px -6px #777;
+}
+
+.margin-img {
+  margin-top: 5%;
+}
