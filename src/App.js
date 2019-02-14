@@ -56,20 +56,20 @@ class App extends React.Component {
        else {
           return (
               <div className="App">
-                  <br/>
+               
                   <form onSubmit={ this.onSearchSubmit }>
-                      <div className='search-text'>Enter city name for restaurants.</div>
-                      <input type='text' className='search-bar' placeholder='Toronto' onChange={ this.handleChange }/>
-                      <input type='submit' className='search-submit'/>
+                      <div className='search-text'>Enter city name to find restaurants</div>
+                      <input type='text' className='search-bar' placeholder='city' onChange={ this.handleChange }/>
+                      <input type='submit' className='search-submit' value='Search'/>
                   </form>
-                  <br/>
+               
 
                   <div className='results-content'>
                     {this.state.restaurants.map(restaurant => (
-                      <div  key={restaurant.id}>
-                        <div>Name: {restaurant.name}</div>
-                        <div>Address: {restaurant.address}, {restaurant.city}</div>
-                        <div>Price: {restaurant.price}</div>
+                      <div key={restaurant.id}>
+                        <div>Name: <span className="accent">{restaurant.name}</span></div>
+                        <div>Address: <span className="accent">{restaurant.address}, {restaurant.city}</span></div>
+                        <div>Price: <span className="accent">{restaurant.price}</span></div>
                         <br/>
                       </div>
                       ))}
