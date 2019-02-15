@@ -30,7 +30,7 @@ class App extends React.Component {
 
     fetchResults(url){
        this.setState({ isLoading: true });
-        fetch(`http://opentable.herokuapp.com/api/restaurants?city=${this.state.value}`)
+        fetch(`https://opentable.herokuapp.com/api/restaurants?city=${this.state.value}`)
             .then(response => {
               if (response.ok) {
                 return response.json();
